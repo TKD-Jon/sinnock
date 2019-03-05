@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Ignore the next two lines, it's just to add fluff -->
+    <link rel="stylesheet" href="./domStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <!-- Ignore the above two lines, it's just to add fluff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <!-- This Link is important -->
+    <link rel="stylesheet" href="./css/layer-toggler.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Hello Mr. Sinnock</h1>
+        <strong>This document is a showcase for your new tool.</strong>
+    </div>
+
+    <div class="development-container">
+
+        <div class="main-layer-toggler-container" id="layer-toggler-1">
+            <div class="viewer">
+                <img src="./images/sky-graphic/blue-brackground.png" alt="" class="layer layer-1">
+                <img src="./images/sky-graphic/skyline.png" alt="" class="layer layer-2">
+                <img src="./images/sky-graphic/house.png" alt="" class="layer layer-3">
+                <img src="./images/sky-graphic/grass.png" alt="" class="layer layer-4">
+            </div>
+            <div class="toggler">
+                <strong>Use the check boxes beloew to toggle the layers on the left</strong>
+                <ul>
+                    <li>
+                        <label for="layer-1" >
+                            <img src="./images/sky-graphic/blue-brackground.png" alt="" class="thumbnail">
+                            <p>Layer 1</p>
+                        </label>
+                        <input class="checkbox" type="checkbox" id="layer-1" checked>
+                    </li>
+                    <li>
+                         <label for="layer-2">
+                            <img src="./images/sky-graphic/skyline.png" alt="" class="thumbnail">
+                            <p>Layer 2</p>
+                        </label>
+                        <input class="checkbox" type="checkbox" id="layer-2" checked>
+                    </li>
+                    <li>
+                         <label for="layer-3" >
+                            <img src="./images/sky-graphic/house.png" alt="" class="thumbnail">
+                            <p>Layer 3</p>
+                        </label>
+                        <input class="checkbox" type="checkbox" id="layer-3" checked>
+                    </li>
+                    <li>
+                         <label for="layer-4" >
+                            <img src="./images/sky-graphic/grass.png" alt="" class="thumbnail">
+                            <p>Layer 4</p>
+                        </label>
+                        <input class="checkbox" type="checkbox" id="layer-4" checked>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div>
+            <h1 style="margin-top:3em;margin-bottom:0">Here is a second layer-toggler</h1>
+            <p>This one is smaller</p>
+        </div>
+    
+        <div style="width:50%;">
+            <div class="main-layer-toggler-container" id="layer-toggler-2">
+                <div class="viewer">
+                    <img src="./images/sky-graphic/blue-brackground.png" alt="" class="layer layer-5">
+                    <img src="./images/sky-graphic/skyline.png" alt="" class="layer layer-6">
+                    <img src="./images/sky-graphic/house.png" alt="" class="layer layer-7">
+                    <img src="./images/sky-graphic/grass.png" alt="" class="layer layer-8">
+                </div>
+                <div class="toggler">
+                    <strong>Use the check boxes beloew to toggle the layers on the left</strong>
+                    <ul>
+                        <li>
+                            <label for="layer-5">
+                                <img src="./images/sky-graphic/blue-brackground.png" alt="" class="thumbnail">
+                                <p>Layer 5</p>
+                            </label>
+                            <input class="checkbox" type="checkbox" id="layer-5" checked>
+                        </li>
+                        <li>
+                            <label for="layer-6">
+                                <img src="./images/sky-graphic/skyline.png" alt="" class="thumbnail">
+                                <p>Layer 6</p>
+                            </label>
+                            <input class="checkbox" type="checkbox" id="layer-6" checked>
+                        </li>
+                        <li>
+                            <label for="layer-7">
+                                <img src="./images/sky-graphic/house.png" alt="" class="thumbnail">
+                                <p>Layer 7</p>
+                            </label>
+                            <input class="checkbox" type="checkbox" id="layer-7" checked>
+                        </li>
+                        <li>
+                            <label for="layer-8">
+                                <img src="./images/sky-graphic/grass.png" alt="" class="thumbnail">
+                                <p>Layer 8</p>
+                            </label>
+                            <input class="checkbox" type="checkbox" id="layer-8" checked>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The two scripts below are required for this to work -->
+    <script src="./js/jQuery_3_3_1.js"></script>
+    <script src="./js/dev.js"></script>
+    <div class="footer" style="margin-bottom: 5%; text-align: center">
+        <a href="./instructions.html">Read the instructions</a>
+    </div>
+</body>
+</html>
