@@ -73,3 +73,25 @@ pre[class*=language-] {
 code[class*=language-] {
     text-shadow: none;
 }
+    .flexer :nth-child(1) {
+        width: 5%;
+    }
+    .flexer :nth-child(n+2) {
+        width:5%;
+    }
+@media(max-width:767px) {
+    .flexer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .flexer :nth-child(1) {
+        width: 100%;
+    }
+    .flexer :nth-child(n+2) {
+        width:2em;
+    }
+    .flexer :nth-last-child(1) {
+        margin-right:auto
+    }
+}
