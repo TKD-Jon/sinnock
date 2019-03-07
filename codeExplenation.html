@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <!-- Ignore the above two lines, it's just to add fluff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+
+</head>
+<body>
+    <div class="development-container">
+        <div class="topBar">
+            <h1>Code Explenation</h1>
+            <div>
+                <a href="./index.html" styl>Go Home</a>
+                <a href="./instructions.html" styl>View Instructions</a>
+            </div>
+        </div>
+        <div class="">
+            <strong>below are all the instructions breaking down this new tool</strong>
+            <br>
+        </div>
+        <div class="card">
+            <h2>1) HTML Structure</h2>
+            <strong>This is a full representation of the HTML structure for the "Layer Toggler"</strong>
+            <p>I break this down into bits that are easier to understand below</p>
+            <pre class="language-html"><code class="language-html">&lt;!-- This Link is required for this to work --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/layer-toggler.css&quot;&gt;
+
+&lt;div class=&quot;main-layer-toggler-container&quot; id=&quot;layer-toggler-1&quot;&gt;
+    &lt;div class=&quot;viewer&quot;&gt;
+        &lt;img src=&quot;./images/sky-graphic/blue-brackground.png&quot; alt=&quot;&quot; class=&quot;layer layer-1&quot;&gt;
+        &lt;img src=&quot;./images/sky-graphic/skyline.png&quot; alt=&quot;&quot; class=&quot;layer layer-2&quot;&gt;
+        &lt;img src=&quot;./images/sky-graphic/house.png&quot; alt=&quot;&quot; class=&quot;layer layer-3&quot;&gt;
+        &lt;img src=&quot;./images/sky-graphic/grass.png&quot; alt=&quot;&quot; class=&quot;layer layer-4&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;toggler&quot;&gt;
+        &lt;strong&gt;Use the check boxes below to toggle the layers on the left&lt;/strong&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;label for=&quot;layer-1&quot; &gt;
+                    &lt;img src=&quot;./images/sky-graphic/blue-brackground.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+                    &lt;p&gt;Layer 1&lt;/p&gt;
+                &lt;/label&gt;
+                &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;layer-1&quot; checked&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for=&quot;layer-2&quot;&gt;
+                    &lt;img src=&quot;./images/sky-graphic/skyline.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+                    &lt;p&gt;Layer 2&lt;/p&gt;
+                &lt;/label&gt;
+                &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;layer-2&quot; checked&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for=&quot;layer-3&quot; &gt;
+                    &lt;img src=&quot;./images/sky-graphic/house.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+                    &lt;p&gt;Layer 3&lt;/p&gt;
+                &lt;/label&gt;
+                &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;layer-3&quot; checked&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for=&quot;layer-4&quot; &gt;
+                    &lt;img src=&quot;./images/sky-graphic/grass.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+                    &lt;p&gt;Layer 4&lt;/p&gt;
+                &lt;/label&gt;
+                &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;layer-4&quot; checked&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- The two scripts below are required for this to work --&gt;
+&lt;script src=&quot;./js/jQuery_3_3_1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./js/dev.js&quot;&gt;&lt;/script&gt;</code>
+            </pre>
+            <h3>1.a Parent Container</h3>
+            <strong>The parent container is a single div that holds the sections, viewer and toggle.</strong>
+            <pre><code class="lang-html">&lt;div class=&quot;main-layer-toggler-container&quot; id=&quot;layer-toggler-1&quot;&gt;
+    viewer
+    toggle
+&lt;/div&gt;</code></pre>
+            <p style="margin: 0 0 2em 1em;">Above you can see the start "< div" and end "/div >" tags for the parent container. <br>
+                    <br>Note that this has an <b>ID</b> of <b><i>layer-toggler-1</i></b>. If you add a second toggler to the <u>same</u> page, you
+                    will need to have the second <b>ID</b> set to <b><i>layer-toggler-2</i></b> if 3 on one page, then the third must be 3, and so on. </p>
+            <h3>1.b Viewer</h3>
+            <strong>The Viewer is the left half of the tool. It holds images as layers.</strong>
+            <pre><code class="lang-html">&lt;div class=&quot;viewer&quot;&gt;
+    &lt;img src=&quot;./images/sky-graphic/blue-brackground.png&quot; alt=&quot;&quot; class=&quot;layer layer-1&quot;&gt;
+    &lt;img src=&quot;./images/sky-graphic/skyline.png&quot; alt=&quot;&quot; class=&quot;layer layer-2&quot;&gt;
+    &lt;img src=&quot;./images/sky-graphic/house.png&quot; alt=&quot;&quot; class=&quot;layer layer-3&quot;&gt;
+    &lt;img src=&quot;./images/sky-graphic/grass.png&quot; alt=&quot;&quot; class=&quot;layer layer-4&quot;&gt;
+&lt;/div&gt;</code></pre>
+<p style="margin: 0 0 2em 1em;">Above, you will see all the viewers code. A few things to point out are<ol>
+    <li>The main div holding the images must have the class name of view</li>
+    <li>Image names do not matter</li>
+    <li>Eeach image needs to have a class name of layer & a class name of which layer it is.</li>
+    <li>If a page has more than 1 toggler on it, you must continue the layer numbers.
+        <ul><li>
+            For example, say you have the first toggler with 4 slides, then the second toggler would not start with layer-1, it would start with layer-5.
+        </li></ul>
+    </li>
+
+</ol></p>
+            <h3>1.c Toggle</h3>
+            <strong>This is the most important section of the HTML</strong>
+            <pre><code class="lang-html"> &lt;div class=&quot;toggler&quot;&gt;
+    &lt;strong&gt;Use the check boxes below to toggle the layers on the left&lt;/strong&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;label for=&quot;layer-1&quot; &gt;
+                &lt;img src=&quot;./images/sky-graphic/blue-brackground.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+                &lt;p&gt;Layer 1&lt;/p&gt;
+            &lt;/label&gt;
+            &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;layer-1&quot; checked&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;label for=&quot;layer-2&quot;&gt;
+                &lt;img src=&quot;./images/sky-graphic/skyline.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+                &lt;p&gt;Layer 2&lt;/p&gt;
+            &lt;/label&gt;
+            &lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;layer-2&quot; checked&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+<p style="margin: 0 0 2em 1em;">This is really 3 sections<ol>
+    <li>The main container & description</li>
+    <li>The UL & LI's</li>
+    <li>The Label & Input</li>
+</ol>Thus, I'm breaking this into sub sections</p>
+<h5>1.c.1 toggler</h5>
+<pre><code class="lang-html">&lt;div class=&quot;toggler&quot;&gt;
+    &lt;strong&gt;Use the check boxes below to toggle the layers on the left&lt;/strong&gt;
+    UL 
+        LI
+            Label
+            Input
+&lt;/div&gt;</code></pre>
+<p style="margin: 0 0 2em 1em;">Above you can see the loose structure of the toggler section</p>
+<h5>1.c.2 ul and lis</h5><pre><code class="lang-html">&lt;ul&gt;
+    &lt;li&gt;
+        label
+        input
+    &lt;/li&gt;
+    &lt;li&gt;
+        label
+        input
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<p style="margin: 0 0 2em 1em;">Notice that the li's have no class on them</p>
+<h5>1.c.3 label and inputs</h5>
+<pre><code class="lang-html">&lt;label for=&quot;layer-2&quot;&gt;
+    &lt;img src=&quot;./images/sky-graphic/skyline.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot;&gt;
+    &lt;p&gt;Layer 2&lt;/p&gt;
+&lt;/label&gt;
+&lt;input class=&quot;checkbox&quot; type=&quot;checkbox&quot; id=&quot;layer-2&quot; checked&gt;</code></pre>
+<p style="margin: 0 0 2em 1em;">This is the most complex part.  A few notes to make this a little more simple are as follows <ol>
+    <li>The label and the input are connected.  The <b>FOR</b> on the <i>label</i> points to the <b>ID</b> on the <i>input</i></li>
+    <li>The image that you use can be anything, make sure that the thumbnail images matches that layer</li>
+    <li>Make sure that the image has the class thumbnail</li>
+    <li>The class "checkbox" is for styling</li>
+    <li>The type "is" for the HTML to make it a check box</li>
+    <li>The "checked" attribute is for the JS to know wheither or not to hide the layer</li>
+    <li>Make sure the the ID goes up, and like the viewer images, make sure that the second/more continue moving up, always using a unique ID</li>
+</ol></p>
+<h3>1.d Additional Files</h3>
+<strong>These are the links to the CSS, and JS that you will need to use this</strong>
+<pre><code class="lang-html">&lt;!-- This Link is required for this to work --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/layer-toggler.css&quot;&gt;
+
+
+&lt;!-- The two scripts below are required for this to work --&gt;
+&lt;script src=&quot;./js/jQuery_3_3_1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./js/dev.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p style="margin: 0 0 2em 1em;">Just a quick note on this one.  The file paths will need to go to wehre the files are located on your server. You may need to change the src="" to ../ instead of just ./</p>
+        </div>
+        <div class="card">
+            <h2>2) The JavaScript</h2>
+            <strong>This is a full representation of all the js used for the "Layer Toggler"</strong>
+            <p>This is really three sections, 1) Initialization 2) checkIfActive and 3) updateparentHeight</p>
+            <pre class="language-css"><code class="language-css">$(window).ready(function(){
+            
+    updateparentHeight();
+
+    $('.checkbox').click(function(){
+        var thisLayer = $(this).attr('id');
+        checkIfActive(thisLayer);
+    })
+});
+
+function checkIfActive(thisLayer) {
+    
+    var thisLayerID = '#'+thisLayer;
+    var thisLayerClass = '.'+thisLayer;
+
+    if ($(thisLayerID).is(':checked')) {
+        $(thisLayerClass).show(225);
+    } else {
+        $(thisLayerClass).hide(225);
+    }
+};
+
+function updateparentHeight() {
+
+    var totalTogglers = $('.main-layer-toggler-container').length;
+
+    for (i = 1; i <= totalTogglers; i++) { var parentID="#layer-toggler-" + i; var thisSelector=parentID +' .viewer>:nth-child(1)';
+        var childImageHeight = $(thisSelector).height();
+
+        $(parentID).css('height', childImageHeight)
+    };
+
+}</code></pre>
+<h3>2.a Initialization</h3>
+<pre><code class="lang-js">$(window).ready(function(){
+
+        updateparentHeight();
+
+        $('.checkbox').click(function(){
+            var thisLayer = $(this).attr('id');
+            checkIfActive(thisLayer);
+        });
+});</code></pre>
+<p style="margin: 0 0 2em 1em;">This is saying, <br><br>when the window is ready, <br>run the function "updateparentHeight()" and listen for an event where an element with the class of ".checked" is clicked on.<br><br>
+If the event happens,<br>
+set the variable "thisLayer" to the ID of the element clicked on<br>
+then, run the function "checkIfActive" and run it with thisLayer</p>
+<h3>2.b Check If Active</h3>
+<pre><code class="lang-js">function checkIfActive(thisLayer) {
+
+    var thisLayerID = '#'+thisLayer;
+    var thisLayerClass = '.'+thisLayer;
+
+    if ($(thisLayerID).is(':checked')) {
+        $(thisLayerClass).show(225);
+    } else {
+        $(thisLayerClass).hide(225);
+    }
+};</code></pre>
+<p style="margin: 0 0 2em 1em;">This is saying, <br><br>
+set the variable thisLayerID to "#" and thisLayer (Which was passed in from the first argument "thisLayer")<br>
+Set the variable thisLayerClass to the same thing as ID but with "." instead of "#"<br>
+Now, if thisLayerID is checked on click then animate in the layer (Note that the state "checked" will update before the JS runs. So if it's checked, and you click on the check box, it will uncheck, then run the JS)<br>
+if it's not checked, hide the layer image</p>
+<h3>2.c Update Parent Height</h3>
+<pre><code class="lang-js">function updateparentHeight() {
+
+    var totalTogglers = $('.main-layer-toggler-container').length;
+
+    for (i = 1; i <= totalTogglers; i++) { 
+        var parentID="#layer-toggler-" + i; 
+        var thisSelector = parentID +' .viewer>:nth-child(1)';
+        var childImageHeight = $(thisSelector).height();
+
+        $(parentID).css('height', childImageHeight)
+    };
+
+};</code></pre>
+<p style="margin: 0 0 2em 1em;">This is saying, <br><br>
+set the variable "totalTogglers" to the amount of togglers there are on this page (In the demo there are 2)
+<br>Then run this section of code X amount of times, where X is the number of "totalTogglers"<br>
+In this section, set the variable "parentID" to the CSS selector #layer-toggler-i (Where I is the number of times this code ran, starting at 1) 
+<br>
+Then set the variable "thisSelector" to the child ".viewer"'s last child from the var "parentID" (This is actually just grabbing the height of the image so that when the browser screen size changes the .viewer container will always be the right height)
+<br>
+Then set the variable "childImageHeight" to the amount of pixels heigh that "thisSelector" is equal to
+<br>
+Then update the height of the element with the CSS selector that is equal to "parentID" to the height of "childImageHeight" </p>
+        </div>
+        <div class="card">
+            <h2>3) The CSS</h2>
+            <strong>This is a full representation of the CSS used for the "Layer Toggler"</strong>
+            <p>One last time! I break this down into bits that are easier to understand below</p>
+            <pre class="language-css"><code class="language-css">.main-layer-toggler-container {
+    position: relative;
+    clear: both;
+    margin: auto;
+}
+.viewer {
+    position: relative;
+    width: 70%;
+    float: left;
+}
+.viewer :nth-child(n+1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.toggler {
+    float: right;
+    width: 24%;
+    background: beige;
+    padding: 2%;
+}
+.toggler ul {
+    list-style: none;
+    margin: 0;
+    margin-top:1em;
+    padding: 0;
+}
+.toggler ul li {
+    height: 3em;
+}
+.toggler ul li :nth-child(n+1) {
+    float: left;
+}
+.toggler ul li label {
+    width: 90%;
+}
+.toggler ul li input {
+    width:10%;
+    margin: 0;
+}
+.toggler ul li label p {
+    margin: 0 5%;
+}
+.thumbnail {
+    width: 15%;
+    border: 1px solid #00000030;
+    user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+}</code></pre>
+        </div>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <!-- Ignore the next two lines, it's just to add fluff -->
+    <link rel="stylesheet" href="./domStyles.css">
+    <div class="footer" style="margin-bottom: 5%; text-align: center;">
+        <a href="./instructions.html">Read the instructions</a>
+    </div>
+    <div class="footer" style="margin-bottom: 5%; text-align: center;">
+        <a href="./index.html">Go Home</a>
+    </div>
+</body>
+</html>

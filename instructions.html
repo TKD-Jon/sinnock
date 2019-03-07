@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Ignore the next two lines, it's just to add fluff -->
-    <link rel="stylesheet" href="./domStyles.css">
+
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <!-- Ignore the above two lines, it's just to add fluff -->
     <meta charset="UTF-8">
@@ -12,19 +12,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
 
 </head>
+
 <body>
     <div class="development-container">
         <div class="topBar">
             <h1>Instructions</h1>
-            <a href="./index.html" styl>Go Home</a>
+            <div>
+                <a href="./index.html" styl>Go Home</a>
+                <a href="./codeExplenation.html" styl>Code Explenation</a>
+            </div>
         </div>
         <div class="">
-            <strong>Beloew are all the instructions breaking down this new tool</strong>
-            <p>test</p>
+            <strong>below are all the instructions breaking down this new tool</strong>
+            <br>
         </div>
         <div class="card">
-            <h2>1) HTML Structure</h2>
-            <strong>Below is a full representation of the HTML structure for the "Layer Toggler"</strong>
+            <h2>Quick Overview</h2>
+            <p>This document is meant to get you up and running as easily as possible. For a more in depth explenation, head over to the <a href="./codeExplenation.html">Code Explenation page.</a></p>
+            <strong>These are the steps to adding this tool to your webpage.</strong>
+            <ol style="line-height:1.5">
+                <li>Add the 1 CSS file to a folder on your server. (Most common path is  root/css/style.css)</li>
+                <li>Add the 2 JS files to a folder on your server. (Most common path is root/js/files.js)</li>
+                <li>Copy the <b>"Toggler"</b> html below</li>
+                <li>Paste it into a single container on page</li>
+                <li>Update the IMG src's on the .viewer section, and the .thumbnail section</li>
+                <li>Increment the layer numbers</li>
+                <li>Copy the <b>"CSS Link"</b> html below</li>
+                <li>Paste it in the head of your website</li>
+                <li>Make sure that your link path is correct</li>
+                <li>Copy the <b>"Scripts"</b> html below</li>
+                <li>Paste is just before the <code class="language-html">&lt;/body&gt;</code></li>
+                <li>Make sure that the src paths are all correct</li>
+            </ol>
+            <h3>Toggler</h3>
             <pre class="language-html"><code class="language-html">&lt;div class=&quot;main-layer-toggler-container&quot; id=&quot;layer-toggler-1&quot;&gt;
     &lt;div class=&quot;viewer&quot;&gt;
         &lt;img src=&quot;./images/sky-graphic/blue-brackground.png&quot; alt=&quot;&quot; class=&quot;layer layer-1&quot;&gt;
@@ -33,7 +53,7 @@
         &lt;img src=&quot;./images/sky-graphic/grass.png&quot; alt=&quot;&quot; class=&quot;layer layer-4&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;toggler&quot;&gt;
-        &lt;strong&gt;Use the check boxes beloew to toggle the layers on the left&lt;/strong&gt;
+        &lt;strong&gt;Use the check boxes below to toggle the layers on the left&lt;/strong&gt;
         &lt;ul&gt;
             &lt;li&gt;
                 &lt;label for=&quot;layer-1&quot; &gt;
@@ -65,29 +85,25 @@
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-                </code>
-            </pre>
-            <h3>1.A Parent Container</h3>
-            <strong>Below is a full representation of the HTML structure for the "Layer Toggler"</strong>
-            <pre><code class="lang-html">&lt;div class=&quot;main-layer-toggler-container&quot; id=&quot;layer-toggler-1&quot;&gt;
-    Rest of the HTML
-&lt;/div&gt;
-            </code></pre>
-            <h3>1.B Parent Container</h3>
-            <strong>Below is a full representation of the HTML structure for the "Layer Toggler"</strong>
-            <pre><code class="lang-html">&lt;div class=&quot;main-layer-toggler-container&quot; id=&quot;layer-toggler-1&quot;&gt;
-    Rest of the HTML
-&lt;/div&gt;
-            </code></pre>
-            <h3>1.C Parent Container</h3>
-            <strong>Below is a full representation of the HTML structure for the "Layer Toggler"</strong>
-            <pre><code class="lang-html">&lt;div class=&quot;main-layer-toggler-container&quot; id=&quot;layer-toggler-1&quot;&gt;
-    Rest of the HTML
-&lt;/div&gt;
-            </code></pre>
+&lt;/div&gt;</code></pre>
+<h3 style="padding-top:2em">CSS Link</h3>
+<pre class="language-html"><code class="language-html">&lt;!-- This Link is required for this to work --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/layer-toggler.css&quot;&gt;</code></pre>
+<h3 style="padding-top:2em">Scripts</h3>
+<pre class="language-html"><code class="language-html">&lt;!-- The two scripts below are required for this to work --&gt;
+&lt;script src=&quot;./js/jQuery_3_3_1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;./js/dev.js&quot;&gt;&lt;/script&gt;</code></pre>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+    <!-- Ignore the next two lines, it's just to add fluff -->
+    <link rel="stylesheet" href="./domStyles.css">
+    <div class="footer" style="margin-bottom: 5%; text-align: center;">
+        <a href="./codeExplenation.html">See the code breakdown</a>
+    </div>
+    <div class="footer" style="margin-bottom: 5%; text-align: center;">
+        <a href="./index.html">Go Home</a>
+    </div>
 </body>
+
 </html>

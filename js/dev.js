@@ -30,5 +30,4 @@ function updateparentHeight() {
         $(parentID).css('height', childImageHeight)
     };
     
-    // $('.main-layer-toggler-container').css("height", childHeight)
 }
